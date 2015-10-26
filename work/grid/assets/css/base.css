@@ -1,0 +1,53 @@
+/*
+  Base
+*/
+
+/* structure */
+.container {
+  margin: 0 auto;
+}
+
+/* Box Model */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Type */
+body {
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 23px; }
+h4 { font-size: 20px; }
+h4 { font-size: 18px; }
+h6 { font-size: 16px; }
+
+a, a:link {}
+a:visited {}
+a:hover   {}
+a:focus   {}
+a:active  {}
+
+/* Media */
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+/* Helpers */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

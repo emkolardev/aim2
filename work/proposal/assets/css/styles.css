@@ -1,0 +1,128 @@
+/*==================================
+COLOR PALLETTE
+==================================*/
+
+/*
+  dark    	rgba(60,60,60,1)
+  medium	rgba(80,80,80,1)
+  purple	rgba(91,40,96,1)
+  pink		rgba(220,70,100,1)
+  green		rgba(20,175,125,1)
+  orange	rgba(255,129,95,1)
+  blue		rgba(50,160,210,1)
+  teal		rgba(0,145,145,1)
+*/
+
+
+/*==================================
+STYLES
+==================================*/
+
+body {
+/* 	background-color: rgba(60,60,60,1); */
+	width: 100%
+}
+
+header {
+	background-color: rgba(50,160,210,0.7);
+	top: -20px;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+header h1 {
+	font-size: 30px;
+	color: rgba(255,255,255,0.85);
+}
+
+header h2 {
+	margin-top: -20px;
+	color: rgba(255,255,255,0.45);
+}
+
+#work {
+	margin-left: -40px;
+}
+
+
+.container {
+	width: 75%;
+	margin: 15px auto 0px auto;
+	padding: 20px;
+}
+
+.orange {
+	background-color: rgba(255,129,95,0.65);
+}
+
+.blue {
+	background-color: rgba(50,160,210,0.65);
+}
+
+.purple {
+	background-color: rgba(91,40,96,0.65);
+}
+
+.pink {
+	background-color: rgba(220,70,100,0.65);
+}
+
+.teal {
+	background-color: rgba(0,145,145,0.65);
+}
+
+/*li {
+	list-style: none;
+	margin: 0px auto;
+	width: 40%;
+	text-align: center;
+	padding: 10px 0px;
+}*/
+
+.blueLink:hover {
+	color: rgba(50,160,210,1);
+}
+
+.orangeLink:hover {
+	color: rgba(255,129,95,1);
+}
+
+.purpleLink:hover {
+	color: rgba(91,40,96,1);
+}
+
+.pinkLink:hover {
+	color: rgba(220,70,100,1);
+}
+
+.tealLink:hover {
+	color: rgba(0,145,145,1);
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+h1 {
+	font-size: 26px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+.proposalIntro {
+	font-style: italic;
+	color: rgba(140,140,140,1);
+}
+
+footer {
+	text-align: right;
+	width: 85%;
+	padding-top: 25px;
+	color: rgba(180,180,180,1);
+}

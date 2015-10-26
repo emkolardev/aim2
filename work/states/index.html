@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu</title>
+    <link rel="shortcut icon" href="images/favicon.png?v=1">
+
+    <!-- third party -->
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/vendor/foundation.grid.css">
+
+    <!-- ours -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="column small-12">
+            <h1>State Demo</h1>
+            <a href="#" class="menu-toggle" data-toggle-class="open" data-toggle-element="menu">
+              Menu
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="menu">
+      <div class="center-vertical-wrapper">
+        <div class="container center-vertical">
+
+          <div class="row">
+            <div class="column small-centered small-10 medium-8 large-6">
+              <ul>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Profile</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="column small-12">
+            <div class="filler x5"><!-- placeholder content --></div>
+
+              <a href="#" class="post" data-toggle-class="heart">
+                <img src="images/moon.jpg" alt="Moon" width="400" height="400">
+                <span class="icon"></span>   
+              </a>
+              <a href="#" class="post" data-toggle-class="heart">
+                <img src="images/moon.jpg" alt="Moon" width="400" height="400">
+                <span class="icon"></span>   
+              </a>          
+              <a class="button" data-toggle-class="heart" data-toggle-element="post">
+                <span class="like">Heart All</span>
+                <span class="unlike">Unheart All</span>
+              </a>    
+              <span class="heart top left"></span><span class="heart top right"></span>
+              <span class="heart bottom left"></span><span class="heart bottom right"></span>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/components/toggle.js"></script>
+<!-- <script src="js/global.js"></script> -->
+  </body>
+</html>

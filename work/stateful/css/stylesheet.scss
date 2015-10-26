@@ -1,0 +1,359 @@
+@mixin callKeyframe($keyframe, $timing, $ease) {
+	-webkit-animation: $keyframe $timing;
+	-webkit-animation-timing-function: $ease;
+	-moz-animation: $keyframe $timing;
+	-moz-animation-timing-function: $ease;
+	animation: $keyframe $timing;
+	animation-timing-function: $ease;
+}
+
+@mixin borders($width: 2px, $style: solid, $color: rgba(180,180,180,1), $radius: 3px, $top: $width, $right: $width, $btm: $width, $left: $width) {
+	border-top: $top $style $color;
+	border-right: $right $style $color;
+	border-bottom: $btm $style $color;
+	border-left: $left $style $color;
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+
+.container {
+	width: 98%;
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.7);
+	width: 100%;
+	min-height: 100%;
+	z-index: 990;
+	@include callKeyframe(fadeOut, 0.3s, linear);
+	display: none;
+}
+
+form.search {
+	min-height: 200px;
+	margin-top: 80px;
+	@include borders();
+
+	.formTitle {
+		background-color: rgba(200,200,200,0.3);
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		height: 30px;
+		// @include borders();
+	}
+
+	.searchRadius {
+		width: 250px;
+		height: 30px;
+		margin: 15px 0 10px 0;
+		@include borders($width: 1px, $radius: 5px);
+	}
+}
+
+.zipBox {
+	margin: 0 10px;
+	border-radius: 5px;
+	width: 100px;
+}
+
+.checkVehicle {
+	margin: 0 10px 0 5px;
+}
+
+.checks {
+	margin-top: 5px;
+}
+
+.button {
+	background-color: white;
+	text-align: center;
+	width: 120px;
+	margin: 20px 0;
+	border-radius: 5px;
+	border: 1px solid black;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgb(200,200,200);
+	}
+}
+
+.row.vans, .row.trucks, .row.suvs {
+	margin-bottom: 10px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.actions {
+	height: 80px;
+	width: 100%;
+}
+
+.expand {
+	display: block;
+	height: 20px;
+	width: 20px;
+	background: url('../images/search-icon.png') center center no-repeat transparent;
+	margin: 10px auto;
+	cursor: pointer;
+}
+
+.quicklook {
+	position: fixed;
+	min-height: 200px;
+	background-color: rgba(200,200,200,1);
+	border: 5px solid rgba(0,0,0,1);  
+	border-radius: 5px;
+	width: 80%;
+	top: 80px;
+	left: 10%;
+	z-index: 995;
+
+	.row {
+		padding: 0px;
+	}
+}
+
+.closeIcon {
+	position: absolute;
+	right: -6px;
+	top: -7px;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	background: url('../images/redX.png') center center no-repeat white;
+	@include borders($color: transparent, $radius: 50%);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+	z-index: 996;
+
+	&:hover {
+		background-color: rgba(250,160,160,1);
+	}
+}
+
+.closeX {
+	cursor: pointer;
+}
+
+.descLong {
+	display: none;
+}
+
+.seeMore {
+	height: 60px;
+	width: 180px;
+	margin: 0 auto;
+}
+
+
+.open {
+	display: block;
+	@include callKeyframe(fadeIn, 0.2s, linear);
+}
+
+.quickPic {
+	padding: 10px;
+}
+
+.quickTitle {
+	text-align: center;
+
+	h3 {
+		font-size: 20px;
+	}
+}
+
+.quickDesc {
+	padding: 20px;
+}
+
+.noShow {
+	display: none;
+}
+
+.locations {
+	min-height: 250px;
+}
+
+.loc-list {
+	margin-top: 5px;
+
+	ol {
+		margin-left: -20px;
+		font-size: 16px;
+
+		li {
+			line-height: 30px;
+		}
+	}
+}
+
+.loc-map, .loc-list {
+	height: 250px;
+	overflow: hidden;
+	@include borders();
+}
+
+#map {
+	height: 250px;
+	width: 100%;
+}
+
+.resultContent {
+	height: 40px;
+	width: 80px;
+	line-height: 18px;
+}
+
+
+.resultHeading, .vehicleType {
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+#ghostHeader {
+  background-color: rgba(0,148,148,1);
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  z-index: 991;
+  padding: 0px 10px 10px;
+  margin-top: -10px;
+
+	h1 {
+		font-size: 14px;
+		line-height: 16px;
+		color: rgba(255,255,255,1);
+	}
+}
+
+.row {
+	margin: 10px 0;
+}
+
+.collapse {
+	display: none;
+}
+
+.grow {
+	display: block;
+	opacity: 1;
+	@include callKeyframe(fadeIn, 0.4s, ease-out);
+}
+
+@-webkit-keyframes fadeOut {
+0%
+{ opacity: 1; display: default;}
+100%
+{ opacity: 0; display: none;}
+}
+
+@-moz-keyframes fadeOut  {
+0%
+{ opacity: 1; display: default;}
+100%
+{ opacity: 0; display: none;}
+}
+
+@keyframes fadeOut {
+0%
+{ opacity: 1; display: default;}
+100%
+{ opacity: 0; display: none;}
+}
+
+@-webkit-keyframes fadeIn {
+0%
+{ opacity: 0;}
+100%
+{ opacity: 1;}
+}
+
+@-moz-keyframes fadeIn  {
+0%
+{ opacity: 0;}
+100%
+{ opacity: 1;}
+}
+
+@keyframes fadeIn {
+0%
+{ opacity: 0;}
+100%
+{ opacity: 1;}
+}
+
+@-webkit-keyframes disappear {
+0%
+{ display: block; opacity: 1; }
+50%
+{ display: block; opacity: 0.5; }
+100%
+{ display: none; opacity: 0; }
+}
+
+@-moz-keyframes disappear  {
+0%
+{ display: block; opacity: 1; }
+50%
+{ display: block; opacity: 0.5; }
+100%
+{ display: none; opacity: 0; }
+}
+
+@keyframes disappear {
+0%
+{ display: block; opacity: 1; }
+50%
+{ display: block; opacity: 0.5; }
+100%
+{ display: none; opacity: 0; }
+}
+
+
+@media (min-width: 635px) {
+
+	.loc-list {
+		margin-top: 0;
+	}
+
+	.descLong {
+		display: block;
+	}
+
+	#ghostHeader {
+		padding-top: 10px;
+
+		h1 {
+			font-size: 16px;
+			line-height: 18px;
+		}
+	}
+}
+
+@media (min-width: 760px) {
+
+}
+
+@media (min-width: 1000px) {
+	.seeMore {
+		
+	}
+
+}

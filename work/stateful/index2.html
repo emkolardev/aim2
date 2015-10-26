@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>States</title>
+    <link rel="shortcut icon" href="">
+    <!-- third party -->
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/vendor/base.css">
+    <link rel="stylesheet" href="css/vendor/foundation.grid.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <header id="ghostHeader" class="grow">
+        <h1><span style="text-decoration: underline;">state-changing elements:</span> checkboxes (hide/show cars), add pins to map by clicking on it or by searching, magnifying glass pulls up quick look, header animation on scroll. </h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <form class="column small-12 medium-12 large-12 search">
+                <div class="row formTitle">
+                    <h3 class="column small-12 medium-12 large-12">Search Vehicles</h3>
+                </div>
+                <div class="row">
+                    <div class="column small-12 medium-12 large-12">
+                        <label>Address or Zip:</label><input type="text" class="zipBox" id="zip">
+                    </div>
+                    <div class="column small-12 medium-12 large-12">
+                        <select name="searchRadius" id="search-radius" class="searchRadius">
+                            <option value="search radius" selected>Search Radius (No actions yet)</option>
+                            <option value="5">5 Miles</option>
+                            <option value="10">10 Miles</option>
+                            <option value="25">25 Miles</option>
+                            <option value="50">50 Miles</option>
+                            <option value="100">100 Miles</option>
+                        </select>
+                    </div>
+                    <div class="column small-12 medium-12 large-12 checks">
+                        <label>Vans</label><input type="checkbox" checked="yes" class="checkVehicle defaultOK" id="vans" data-toggle-class="noShow" data-toggle-element="van">
+                        <label>SUVs</label><input type="checkbox" checked="yes" class="checkVehicle defaultOK" id="suvs" data-toggle-class="noShow" data-toggle-element="suv">
+                        <label>Trucks</label><input type="checkbox" checked="yes" class="checkVehicle defaultOK" id="trucks" data-toggle-class="noShow" data-toggle-element="truck">
+                    </div>
+                </div>
+                <div class="button find" data-toggle-class="open" data-toggle-element="quicklook" onclick="codeAddress()">
+                    Find Vehicles
+                </div>
+            </form>
+        </div>
+        <div class="row locations">
+            <div class="loc-map column small-12 medium-6 large-6">
+                <div id="map">
+                </div>
+            </div>        
+            <div class="loc-list column small-12 medium-6 large-6" id="loc-box">
+                <ol>
+                    <li>Location A</li>
+                    <li>Location B</li>
+                    <li>Location C</li>
+                    <li>Location D</li>
+                </ol>
+            </div>        
+        </div>
+    </div>
+    
+    <div class="main"> 
+        <div class="container">
+            <div class="row vans">
+                <div class="column small-12 medium-6 large-3 van">
+                    <img src="http://www.chrysler.com/assets/images/global/header/chrysler-tnc-veh.png" alt="Chrysler">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+                <div class="column small-12 medium-6 large-3 van">
+                    <img src="http://www.chrysler.com/assets/images/global/header/chrysler-tnc-veh.png" alt="Chrysler">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>                    
+                </div>
+                <div class="column small-12 medium-6 large-3 van">
+                    <img src="http://www.chrysler.com/assets/images/global/header/chrysler-tnc-veh.png" alt="Chrysler">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+                <div class="column small-12 medium-6 large-3 van end">
+                    <img src="http://www.chrysler.com/assets/images/global/header/chrysler-tnc-veh.png" alt="Chrysler">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>                    
+                </div>
+            </div>
+            <div class="row suvs">
+                <div class="column small-12 medium-6 large-3 suv">
+                    <img src="http://www.dodge.com/assets/images/global_nav/durango.png" alt="Dodge Durango">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+                <div class="column small-12 medium-6 large-3 suv">
+                    <img src="http://www.dodge.com/assets/images/global_nav/durango.png" alt="Dodge Durango">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+                <div class="column small-12 medium-6 large-3 suv">
+                    <img src="http://www.dodge.com/assets/images/global_nav/durango.png" alt="Dodge Durango">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+                <div class="column small-12 medium-6 large-3 suv end">
+                    <img src="http://www.dodge.com/assets/images/global_nav/durango.png" alt="Dodge Durango">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+            </div>            
+            <div class="row trucks">
+                <div class="column small-12 medium-6 large-3 truck">
+                    <img src="http://www.dodge.com/assets/images/global_nav/flyout-ram.jpg" alt="Dodge Ram">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+                <div class="column small-12 medium-6 large-3 truck">
+                    <img src="http://www.dodge.com/assets/images/global_nav/flyout-ram.jpg" alt="Dodge Ram">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+                <div class="column small-12 medium-6 large-3 truck">
+                    <img src="http://www.dodge.com/assets/images/global_nav/flyout-ram.jpg" alt="Dodge Ram">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+                <div class="column small-12 medium-6 large-3 truck end">
+                    <img src="http://www.dodge.com/assets/images/global_nav/flyout-ram.jpg" alt="Dodge Ram">
+                    <div class="actions">
+                        <span class="expand" data-toggle-class="open" data-toggle-element="overlay"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="overlay" data-toggle-class="open">
+    <div class="quicklook" data-toggle-class="stop" data-toggle-element="blank">
+        <a href="" class="closeX"><span class="closeIcon"></span></a>
+        <div class="quickPic column small-12 medium-6 large-6">
+            <a href="#"><img src="http://www.chrysler.com/assets/images/global/header/chrysler-tnc-veh.png" alt="sweet ride"></a>
+        </div>
+        <div class="column small-12 medium-6 large-6">
+            <div class="row">
+                <div class="quickTitle column small-12 medium-12 large-12">
+                    <a href="#"><h3>Chrysler Whatever</h3></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="quickTitle column small-12 medium-12 large-12">
+                    <a href="#">Owner Name</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="quickTitle column small-12 medium-12 large-12">
+                    <p>Rating <a href="#"><span class="star" data-toggle-class="rated" data-toggle-index"0"></a><a href="#">⭐</a>️<a href="#" class="star" data-toggle-class="rated" data-toggle-index"0">⭐</a><a href="#" class="star" data-toggle-class="rated" data-toggle-index"0">️⭐</a><a href="#" class="star" data-toggle-class="rated" data-toggle-index"0">️⭐</a>️</p>
+                </div>
+            </div>
+        </div>
+        <div class="row quickDesc">
+            <div class="column small-12 medium-12 large-12">
+                <p class="descLong">
+                    Tilde distillery labore, 8-bit mustache mumblecore sartorial kale chips shabby chic pork belly four loko Marfa deserunt. Fap consectetur tempor, pug cray excepteur butcher ex Vice dreamcatcher Truffaut mustache. Tempor heirloom Marfa, proident kogi mlkshk lo-fi distillery try-hard. Banh mi hella tote bag Intelligentsia, locavore labore ex small batch chia tousled Neutra selvage est cray. Meggings nulla YOLO letterpress, hella hashtag food truck you probably haven't heard of them readymade veniam. Four dollar toast ennui excepteur salvia, American Apparel magna esse forage Godard fugiat gentrify actually butcher skateboard. Single-origin coffee non selfies 8-bit heirloom, cred chambray.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button seeMore">
+                Description and More Photos
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW1HVPEKP2IvGqIhWOguXo497gP7b5Ym0&callback=initMap"></script>
+<script src="js/global.js"></script>
+<script>
+var map;
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var labelIndex = 0;
+function initMap() {
+    var startLat = 41.8781136;
+    var startLng = -87.6297982;
+    var startLoc = new google.maps.LatLng(startLat, startLng);
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 9,
+        center: startLoc
+    });
+    map.data.loadGeoJson('js/emily.json');
+
+    var marker = new google.maps.Marker({
+        position: startLoc,
+        label: labels[labelIndex++ % labels.length],
+        map: map
+    });
+
+    map.data.setStyle(function(feature) {
+        return /** @type {google.maps.Data.StyleOptions} */({
+            icon: '../images/star-purple.png'
+        });
+    });
+    map.data.addListener('mouseover', function(event) {
+        document.getElementById('loc-box').textContent = event.feature.getProperty('model');
+    });
+
+};
+</script>
+<!-- <script src="js/google.js"></script>
+<script src="js/infoWindow.js"></script> -->
+</body>
+</html>

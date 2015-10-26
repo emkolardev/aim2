@@ -1,0 +1,134 @@
+/*==============================
+  Styles
+==============================*/
+
+/*==============================
+Shared and Small
+==============================*/
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.column {
+  padding: 10px;
+  text-align: center;
+}
+
+.column img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/*============================== 
+Base 
+==============================*/
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(180,180,180,1);
+  font-style: italic;
+}
+
+a:hover {
+  color: rgba(100,100,100,1);
+}
+
+/*==============================
+Modules
+==============================*/
+
+header {
+  border-bottom: solid 2px rgba(255,129,95,1);
+  background-color: rgba(255,129,95,0.9);
+}
+
+header h1 {
+  color: white;
+}
+
+main {
+  padding: 20px 0;
+}
+
+main .column {
+  text-align: center;
+  border: solid 2px #fff;
+}
+
+footer {
+  text-align: center;
+  padding-top: 25px;
+  color: rgba(180,180,180,1);
+}
+
+/*============================== 
+Components 
+==============================*/
+
+/*==============================
+Medium up
+==============================*/
+
+@media (min-width: 641px) {
+
+  h1 {
+    text-align: left;
+  }
+
+  main {
+    padding: 30px 0;
+  }
+
+}
+
+/*==============================
+Large up
+==============================*/
+
+@media (min-width: 960px) {
+
+  .column {
+    padding: 15px;
+  }
+
+  .column.eighth, .column.twelfth {
+    padding: 15px 5px;
+  }
+
+  main {
+    padding: 40px 0;
+  }
+
+}
+
+/*==============================
+X-Large up
+==============================*/
+
+@media (min-width: 1441px) { 
+
+  body {
+    font-size: 20px;
+  }
+
+}
+/*==============================
+XX-Large up
+==============================*/
+
+@media (min-width: 1921px) {
+
+
+
+}

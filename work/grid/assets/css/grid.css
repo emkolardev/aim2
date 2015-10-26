@@ -1,0 +1,122 @@
+/*==============================
+Grid System
+==============================*/
+
+/*==============================
+Shared and small
+==============================*/
+
+.container {
+  max-width: 100%;
+}
+
+.row {
+  clear: both;
+  display: block;
+  width: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Make everything single-column for starters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.column {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+/*==============================
+Smallish up
+==============================*/
+
+@media (min-width: 480px) {
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Allow columns to be as small as 50%
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+  .column.quarter, .column.eighth, .column.twelfth {
+    width: 50%;
+  }
+
+}
+
+/*==============================
+Medium up
+==============================*/
+
+@media (min-width: 641px) {
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Allow columns to be as small as 25%
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+  .column.half {
+    width: 50%;
+  }
+
+  .column.third {
+    width: calc(100%/3);
+  }
+
+  .column.quarter, .column.eighth, .column.twelfth {
+    width: 25%;
+  } 
+
+}
+
+/*==============================
+Large up
+==============================*/
+
+@media (min-width: 960px) {
+
+  .container {
+    max-width: 940px;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  All small column sizes allowed starting now
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+  .column.eighth {
+    width: calc(100%/8);
+  }
+
+  .column.twelfth {
+    width: calc(100%/12);
+  }
+
+}
+
+/*==============================
+X-Large up
+==============================*/
+
+@media (min-width: 1441px) { 
+
+  .container {
+    max-width: 1400px;
+  }
+
+}
+
+/*==============================
+XX-Large up
+==============================*/
+
+@media (min-width: 1921px) { 
+
+  .container {
+    max-width: 1800px;
+  }
+
+}

@@ -1,0 +1,82 @@
+/* Box Model */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Type */
+body {
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 23px; }
+h4 { font-size: 20px; }
+h4 { font-size: 18px; }
+h6 { font-size: 16px; }
+a, a:link {}
+a:visited {}
+a:hover   {}
+a:focus   {}
+a:active  {}
+
+/* Media */
+img {
+  display: block;
+}
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+/* Utilities */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.center-vertical-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.center-vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Development */
+.filler {
+  height: 1000px;
+  width: 100%;
+  clear: both;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.2), rgba(0,0,0,.2) 36%,
+    transparent 36%, transparent
+  );
+  background-size: 100% 40px;
+}
+.filler.x2 { height: 2000px; }
+.filler.x3 { height: 3000px; }
+.filler.x4 { height: 4000px; }
+.filler.x5 { height: 5000px; }
+.filler.x6 { height: 6000px; }
+.filler.x7 { height: 7000px; }
+.filler.x8 { height: 8000px; }
+.filler.x9 { height: 9000px; }
+.filler.x10 { height: 10000px; }
