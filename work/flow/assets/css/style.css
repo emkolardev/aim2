@@ -1,0 +1,25 @@
+.container {
+	width: 99%;
+	max-width: 570px;
+	margin: 0 auto;
+}
+
+.fig {
+	width: 100%;
+	max-width: 400px;
+	margin: 10px auto;
+}
+
+.fig img {
+	max-width: 100%;
+}
+
+.figcaption {
+	max-width: 100%;
+}
+
+@media (min-width: 760px) {
+	.fig {
+		max-width: 570px;
+	}
+}
