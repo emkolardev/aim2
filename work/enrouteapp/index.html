@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EnRoute</title>
+	<!-- combined normalize and shared styles (base) -->
+	<link rel="stylesheet" href="css/normalizeAndBase.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="app">
+			<div class="maps" id="map"></div>
+			<header class="header"> 
+				<div class="stack" id="menu-icon">
+					<span class="stackbar top"></span>
+					<span class="stackbar mid"></span>
+					<span class="stackbar btm"></span>
+				</div>
+				<form class="find" id="search-form">
+					<div class="search-left">
+						<span class="search-icon" id="searchicon"></span>
+					</div>
+					<div class="search-right" id="cancel-search">
+						<span class="cancel-search" id="cancelsearch"></span>
+					</div>
+					<div class="search-fill" id="find-place">
+						<input type="text" id="searchbox" class="search">
+					</div>
+				</form>
+			</header>
+
+			<div class="search-body" id="searchbody">
+				<ul class="loc-suggestions" id="locsuggestions">
+				</ul>
+			</div>
+
+			<div class="menu closed" id="toggle-menu">
+				<ul class="menuList" id="menu-list">
+					<li>
+						<span class="listItem"><span class="userIcon" id="user-icon"></span><a href="#">Account</a></span>
+					</li>
+					<li>
+						<span class="listItem"><span class="userIcon" id="user-icon"></span><a href="#">Home</a></span>
+					</li>
+					<li>
+						<span class="listItem"><span class="userIcon" id="user-icon"></span><a href="#">Work</a></span>
+					</li>
+					<li>
+						<span class="listItem"><span class="userIcon" id="user-icon"></span><a href="#">Favorites</a></span>
+					</li>
+					<li>
+						<span class="listItem"><span class="userIcon" id="user-icon"></span><a href="#">Settings</a></span>
+					</li>
+				</ul>
+			</div>
+			<div class="directions" id="dir">
+				<div class="currentDir" id="current-dir">
+					<div class="currentDirIcon" id="current-dir-icon"></div>
+					<div class="currentDirText" id="current-dir-text"><span class="dirText" id="dir-text">Do this stuff</span></div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="navigation">
+					<span class="icon-btn" id="start-route"></span>
+				</div>
+				<div class="opts">
+					<div class="opts-button mode" id="route">Route</div>
+					<div class="opts-button" id="explore">Explore</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/map.js"></script>
+<script src="js/script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh-pApnAQ4eM8ppniRbOVqBu7LkjHhQ2I&callback=initMap"></script>
+</body>
+</html>

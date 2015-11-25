@@ -1,0 +1,592 @@
+body {
+	background: rgba(0,0,0,0.9);
+	max-width: 100%;
+}
+
+.wrap {
+	width: 480px;
+	height: 100vh;
+	max-width: 100%;
+	max-height: 100vh;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.appMain {
+	width: 100%;
+	max-width: 100%;
+	height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;
+	position: absolute;
+}
+
+.appAdmin, .locAdmin {
+	display: none;
+}
+
+.appAdmin.activated, .locAdmin.activated {
+	width: 480px;
+	max-width: 100%;
+	height: calc(100vh - 75px);
+	position: absolute;
+	top: 45px;
+	display: block;
+	background-color: white;
+	z-index: 995;
+	padding: 20px;
+}
+
+.appAdmin.activated a, .locAdmin.activated a {
+	color: black;
+	text-decoration: none;
+}
+
+#map1 {
+	height: calc(100vh - 80px);
+	width: 480px;
+	max-width: 100%;
+	margin: 0;
+	position: absolute;
+	top: 45px;
+}
+
+.direct {
+	height: 200px;
+	max-height: 200px;
+	width: 480px;
+	max-width: 100%;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(255,255,255,1);
+	overflow: auto;
+}
+
+.setter {
+	display: none;
+}
+
+.setter.show {
+	position: absolute;
+	height: 30px;
+	width: 160px;
+	background-color: white;
+	border-radius: 5px;
+	z-index: 996;
+	top: calc(50% - 85px);
+	left: calc(50% - 80px);
+	overflow: hidden;
+	box-shadow: 2px 2px 3px 1px #888888;
+}
+
+.bubbleIcon {
+	width: 30px;
+	height: 30px;
+	background-color: rgba(0,177,136,1);
+	cursor: pointer;
+}
+
+.bubbleText {
+	padding: 5px 0;
+	width: 130px;
+	height: 30px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.locInstruct {
+	margin: 0;
+}
+
+.locLabel {
+	color: rgba(140,140,140,1);
+	font-style: italic;
+	margin-top: -5px;
+}
+
+.instructionsArea {
+	display: none;
+	position: absolute;
+	background-color: rgba(0,0,0,0.8);
+	bottom: -80px;
+	width: 480px;
+	max-width: 100%;
+	height: 80px;	
+	padding: 5px;
+	z-index: 920;
+}
+
+.instructionsArea.show {
+	-webkit-animation: slideUp 0.2s;
+  	-webkit-animation-timing-function: ease-out;
+  	-moz-animation: slideUp 0.2s;
+  	-moz-animation-timing-function: ease-out;
+  	animation: slideUp 0.2s;
+  	animation-timing-function: ease-out;
+  	bottom: 35px;
+}
+
+.instructText {
+	width: 348px;
+	max-width: 74%;
+	height: 100%;
+	margin-right: 2px;
+	color: white;
+	padding-left: 5px;
+}
+
+.displayLocName {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.instructIcon {
+	width: 118px;
+	max-width: 24%;
+	height: 100%;
+	margin-left: 2px;
+	/*background-color: mistyrose;*/
+}
+
+.carIcon {
+	display: block;
+	width: 80px;
+	height: 60px;
+	border-radius: 5px;
+	background: white;
+	margin: 0 auto;
+}
+
+.header {
+	width: 480px;
+	max-width: 100%;
+	height: 45px;
+	background: rgba(0,0,0,0.8);
+	padding: 10px;
+}
+
+.doubleHeader {
+	height: 90px;
+	z-index: 950;
+}
+
+.stack {
+	width: 20px;
+	height: 25px;
+	background-color: rgba(0,0,0,1);
+	cursor: pointer;
+}
+
+.stackbar {
+	width: 20px;
+	height: 4px;
+	background-color: rgba(255,255,255,1);
+	display: block;
+	position: absolute;
+	margin: 0;
+}
+
+.stackbar.open {
+	background-color: rgba(190,190,190,1);
+}
+
+.stackbar.top {
+	margin-top: 1px;
+}
+
+.stackbar.mid {
+	margin-top: 11px;
+}
+
+.stackbar.btm {
+	margin-top: 21px;
+}
+
+.find {
+	width: 440px;
+	max-width: calc(100% - 40px);
+	margin: -25px 0 0 25px;
+/*	margin-top: -25px;
+	margin-left: 25px;*/
+	display:block;
+	position: absolute;
+	height: 35px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+/*	margin-bottom: 0;
+*/	white-space: nowrap;
+}
+
+.search-left {
+	background: rgba(255,255,255,1);
+	position: relative;
+	height: 25px;
+	float: left;
+	width: 20px;
+	display: inline-block;
+	white-space: nowrap;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.search-right {
+	position: relative;
+	height: 25px;
+	min-width: 1px;
+	width: 25px;
+	float: right;
+	display: inline-block;
+	white-space: nowrap;
+	background: rgba(255,255,255,1);
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.search-fill {
+	overflow: hidden;
+	background: rgba(255,255,255,1);
+	height: 25px;
+	position: relative;
+	white-space: nowrap;
+	display: block;
+	width: auto;
+}
+
+.cancel-search.open {
+	display: block;
+	width: 19px;
+	height: 19px;
+	margin: 3px;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,0.3);
+	background-image: url(../images/close-10.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.search-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 4px;
+	background-image: url(../images/mag-16.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.search-body {
+	width: 480px;
+	max-width: 100%;
+	height: calc(100% - 30px);
+	padding: 20px;
+	position: absolute;
+	background: rgba(0,0,0,0.85);
+	display: none;
+	overflow: scroll;
+}
+
+.searching {
+	-webkit-animation: fadeIn 0.2s;
+  	-webkit-animation-timing-function: ease-out;
+  	-moz-animation: fadeIn 0.2s;
+  	-moz-animation-timing-function: ease-out;
+  	animation: fadeIn 0.2s;
+  	animation-timing-function: ease-out;
+	display: block;
+}
+
+.loc-suggestions {
+	color: white;
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.loc-suggestions li {
+	height: 50px;
+	color: white;
+	border-bottom: 1px solid rgba(180,180,180,0.5);
+	cursor: pointer;
+}
+
+.menu {
+	position: absolute;
+	width: 340px;
+	height: calc(100% - 75px);
+	background: rgba(0,0,0,0.85);
+  	-webkit-animation: open 0.2s;
+  	-webkit-animation-timing-function: ease-out;
+  	-moz-animation: open 0.2s;
+  	-moz-animation-timing-function: ease-out;
+  	animation: open 0.2s;
+  	animation-timing-function: ease-out;
+	margin-left: -340px;  
+	z-index: 990;
+  }
+
+.menu.open {
+  	-webkit-animation: close 0.2s;
+  	-webkit-animation-timing-function: ease-out;
+  	-moz-animation: close 0.2s;
+  	-moz-animation-timing-function: ease-out;
+  	animation: close 0.2s;
+  	animation-timing-function: ease-out;
+  	margin-left: 0;
+}
+
+.menu a {
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+}
+
+.menuBack a {
+	font-weight: 400;
+	color: rgba(255,255,255,0.6);
+}
+
+.menuList, .accountList {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 280px;
+	max-width: 100%;
+	display: default;
+}
+
+.menuItem {
+	height: 60px;
+	border-bottom: 1px solid rgba(180,180,180,0.5);
+	text-align: center;
+}
+
+.menuList.hiding {
+	display: none;
+}
+
+.accessAccount {
+	display: none;
+}
+
+.accountBtn {
+	height: 30px;
+	width: 50%;
+	border-radius: 4px;
+	font-size: 14px;
+	margin-right: auto;
+	margin-left: auto;
+	cursor: pointer;
+	text-align: center;
+}
+
+.accountBtn.login {
+	background-color: rgba(0,177,136,1);
+}
+
+.accountBtn.create {
+	background-color: rgba(160,75,158,1);
+}
+
+.accessAccount.open {
+	display: block;
+	width: 280px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.appTitle {
+	position: absolute;
+	width: 340px;
+	max-width: 100%;
+	bottom: 10px;
+	left: 10px;
+	color: rgba(160,75,158,0.8);
+	text-align: center;
+	font-weight: 700;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	height: 35px;
+	width: 100%;
+	z-index: 999;
+}
+
+.opts {
+	bottom: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	max-width: 480px;
+	height: 35px;
+	background: rgba(0,0,0,0.8);
+/*	border: 2px solid white;*/
+
+}
+
+.opts-button {
+	width: 50%;
+	height: 35px;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+.mode {
+	background: rgba(255,255,255,0.5);
+	color: black;
+	cursor: default;
+	border-bottom: 2px solid rgba(255,255,255,0.6);
+}
+
+.search {
+	outline: 0;
+	border: none;
+	width: 100%;
+}
+
+.appExplore {
+	display: none;
+}
+
+.appExplore.activated {
+	height: calc(100vh - 45px);
+	width: 480px;
+	max-width: 100%;
+	position: fixed;
+	top: 45px;
+	overflow: scroll;
+	background-color: rgba(40,40,40,1);
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	z-index: 998;
+}
+
+.exploreCat {
+	width: 240px;
+	max-width: 50%;
+	height: 130px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.catIcon {
+	display: block;
+	margin: 10px auto;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background-color: rgba(0,177,136,1);
+}
+
+.spacer {
+	width: 480px;
+	max-width: 100%;
+	height: 40px;
+}
+
+.flexColumn.show {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.flexRow.show {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+@-webkit-keyframes open {
+  0%
+  { margin-left: 0;}
+  100%
+  { margin-left: -340px;}
+}
+
+@-moz-keyframes open  {
+  0%
+  { margin-left: 0;}
+  100%
+  { margin-left: -340px;}
+}
+
+@keyframes open {
+  0%
+  { margin-left: 0;}
+  100%
+  { margin-left: -340px;}
+}
+
+@-webkit-keyframes close {
+  0%
+  { margin-left: -340px;}
+  100%
+  { margin-left: 0;}
+}
+
+@-moz-keyframes close  {
+  0%
+  { margin-left: -340px;}
+  100%
+  { margin-left: 0;}
+}
+
+@keyframes close {
+  0%
+  { margin-left: -340px;}
+  100%
+  { margin-left: 0;}
+}
+
+@-webkit-keyframes fadeIn {
+  0%
+  { opacity: 0;}
+  100%
+  { opacity: 1;}
+}
+
+@-moz-keyframes fadeIn  {
+  0%
+  { opacity: 0;}
+  100%
+  { opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0%
+  { opacity: 0;}
+  100%
+  { opacity: 1;}
+}
+
+@-webkit-keyframes slideUp {
+  0%
+  { bottom: -80px;}
+  100%
+  { bottom: 35px;}
+}
+
+@-moz-keyframes slideUp  {
+  0%
+  { bottom: -80px;}
+  100%
+  { bottom: 35px;}
+}
+
+@keyframes slideUp {
+  0%
+  { bottom: -80px;}
+  100%
+  { bottom: 35px;}
+}

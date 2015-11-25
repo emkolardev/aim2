@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EnRoute</title>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="bower_components/google-map/google-map.html">
+  <link rel="import" href="bower_components/google-map/google-map-marker.html">
+  <link rel="import" href="bower_components/google-map/google-map-directions.html">
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+
+<!--<google-map id="map1">
+  <google-map-marker id="marker1" title="You"></google-map-marker>
+</google-map>
+<google-map-directions id="directions1"></google-map-directions>
+<ol id="instructions"></ol>-->
+  <div class="wrap">
+    <google-map id="map1">
+      <google-map-marker id="marker1" title="You"></google-map-marker>
+    </google-map>
+    <div class="app">
+      <header class="header"> 
+        <div class="stack" id="menu-icon">
+          <span class="stackbar top"></span>
+          <span class="stackbar mid"></span>
+          <span class="stackbar btm"></span>
+        </div>
+        <form class="find" id="search-form">
+          <div class="search-left">
+            <span class="search-icon" id="searchicon"></span>
+          </div>
+          <div class="search-right" id="cancel-search">
+            <span class="cancel-search" id="cancelsearch"></span>
+          </div>
+          <div class="search-fill" id="find-place">
+            <input type="text" id="searchbox" class="search">
+          </div>
+        </form>
+      </header>
+
+      <div class="search-body" id="searchbody">
+        <ul class="loc-suggestions" id="locsuggestions">
+        </ul>
+      </div>
+
+      <div class="menu closed" id="toggle-menu">
+        <span class="userIcon"></span>
+      </div>
+      
+      <footer class="footer">
+        <div class="navigation">
+          <span class="icon-btn" id="start-route"></span>
+        </div>
+        <div class="opts">
+          <div class="opts-button mode" id="route">Route</div>
+          <div class="opts-button" id="explore">Explore</div>
+        </div>
+      </footer>
+    </div>
+  </div>
+<script>
+(function() {
+  'use strict';
+
+  var map1 = document.querySelector('#map1');
+  var marker1 = document.querySelector('#marker1');
+  //var dir1 = document.querySelector('#directions1');
+  //var instructions = document.querySelector('#instructions');
+
+  //dir1.addEventListener('google-map-response', function(e) {
+    //array of driving directions
+    //var steps = e.detail.response.routes[0].legs[0].steps;
+    //for (var i = 0; i < steps.length; i++) {
+      //instructions.innerHTML += "<li>" + steps[i].instructions + "</li>";
+    //}
+  //});
+
+  navigator.geolocation.getCurrentPosition(function(pos) {
+    map1.longitude = pos.coords.longitude;
+    map1.latitude = pos.coords.latitude;
+
+    marker1.longitude = pos.coords.longitude;
+    marker1.latitude = pos.coords.latitude;   
+
+    //dir1.startAddress = pos.coords.latitude + ', ' + pos.coords.longitude;
+    //dir1.endAddress = 'Martins BBQ Nashville, TN';
+    //dir1.map = map1.map; 
+  })
+
+})();
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

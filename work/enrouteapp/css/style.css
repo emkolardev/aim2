@@ -1,0 +1,379 @@
+body {
+	background: rgba(0,0,0,0.9);
+	max-width: 100%;
+}
+
+.wrap {
+	width: 480px;
+	height: 100vh;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.app {
+	height: 100vh;
+	width: 480px;
+	max-width: 100%;
+	/*background-image: url('../images/map2.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	background-color: rgba(0,0,0,1);
+}
+
+#map {
+	height: calc(100vh - 45px);
+	margin-top: 45px;
+	width: 480px;
+	max-width: 100%;
+	position: absolute;
+}
+
+.header {
+	width: 480px;
+	max-width: 100%;
+	height: 45px;
+	background: rgba(0,0,0,0.8);
+	padding: 5px;
+}
+
+.stack {
+	width: 20px;
+	height: 20px;
+	background-color: rgba(0,0,0,1);
+	margin: 5px 0 0 0;
+	cursor: pointer;
+}
+
+.stackbar {
+	width: 20px;
+	height: 4px;
+	background-color: rgba(255,255,255,1);
+	display: block;
+	position: absolute;
+	margin: 0 ;
+}
+
+.stackbar.open {
+	background-color: rgba(190,190,190,1);
+}
+
+.stackbar.top {
+	margin-top: 2px;
+}
+
+.stackbar.mid {
+	margin-top: 10px;
+}
+
+.stackbar.btm {
+	margin-top: 18px;
+}
+
+.find {
+	width: calc(100%-35px);
+	margin-top: -20px;
+	margin-left: 25px;
+	display:block;
+	position:relative;
+	height: 35px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 0;
+	white-space: nowrap;
+	width: auto;
+}
+
+.search-left {
+	background: rgba(255,255,255,1);
+	position: relative;
+	height: 25px;
+	float: left;
+	width: 20px;
+	display: inline-block;
+	white-space: nowrap;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.search-right {
+	position: relative;
+	height: 25px;
+	min-width: 1px;
+	width: 25px;
+	float: right;
+	display: inline-block;
+	white-space: nowrap;
+	background: rgba(255,255,255,1);
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.search-fill {
+	overflow: hidden;
+	background: rgba(255,255,255,1);
+	height: 25px;
+	position: relative;
+	white-space: nowrap;
+	display: block;
+	width: auto;
+}
+
+.cancel-search.open {
+	display: block;
+	width: 19px;
+	height: 19px;
+	margin: 3px;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,0.3);
+	background-image: url(../images/close-10.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.search-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 4px;
+	background-image: url(../images/mag-16.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.search-body {
+	width: 480px;
+	max-width: 100%;
+	height: calc(100% - 30px);
+	position: absolute;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+
+.searching {
+	-webkit-animation: fadeIn 0.2s;
+  	-webkit-animation-timing-function: ease-out;
+  	-moz-animation: fadeIn 0.2s;
+  	-moz-animation-timing-function: ease-out;
+  	animation: fadeIn 0.2s;
+  	animation-timing-function: ease-out;
+	display: block;
+}
+
+.loc-suggestions {
+	color: white;
+	list-style: none;
+}
+
+.menu {
+	position: absolute;
+	width: 340px;
+	height: calc(100% - 75px);
+	background: rgba(0,0,0,0.8);
+  	-webkit-animation: open 0.2s;
+  	-webkit-animation-timing-function: ease-out;
+  	-moz-animation: open 0.2s;
+  	-moz-animation-timing-function: ease-out;
+  	animation: open 0.2s;
+  	animation-timing-function: ease-out;
+	margin-left: -340px;  
+	z-index: 990;
+	margin-top: 0px;
+	color: white;
+	padding: 20px;
+  }
+
+.menu a {
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+}
+
+.userIcon {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: rgba(180,180,180,1);
+	margin-right: 10px;
+
+}
+
+.listItem {
+	display: block;
+	width: 120px;
+	height: 50px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.menuLink {
+	display: inline-block;
+}
+
+.menuList {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menuList li {
+	height: 50px;
+	padding: 12px;
+	border-bottom: 1px solid rgba(200,200,200,0.5);
+}
+
+.menu.open {
+	visibility: visible;
+  	-webkit-animation: close 0.2s;
+  	-webkit-animation-timing-function: ease-out;
+  	-moz-animation: close 0.2s;
+  	-moz-animation-timing-function: ease-out;
+  	animation: close 0.2s;
+  	animation-timing-function: ease-out;
+  	margin-left: 0;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	height: 35px;
+	width: 480px;
+	max-width: 100%;
+	padding: 0;
+}
+
+.opts {
+	display: flex;
+	flex-direction: row;
+	bottom: 0;
+	left: 0;
+	width: 480px;
+	max-width: 100%;
+	height: 35px;
+	background: rgba(0,0,0,0.8);
+/*	border: 2px solid white;*/
+}
+
+.opts-button {
+	width: calc(480px * 0.5);
+	max-width: 50%;
+	height: 35px;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.mode {
+	background: rgba(255,255,255,0.5);
+	color: black;
+	cursor: default;
+	border-bottom: 2px solid rgba(255,255,255,0.6);
+}
+
+.search {
+	outline: 0;
+	border: none;
+	width: 100%;
+}
+
+.directions {
+	height: 100px;
+	background-color: rgba(200,20,20,0.8);
+	position: absolute;
+	width: 480px;
+	max-width: 100%;
+	bottom: 35px;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.currentDir {
+	height: 100%;
+	width: auto;
+	background-color: rgba(255,255,255,0.4);
+	display: flex;
+	flex-direction: row;
+}
+
+.currentDirIcon {
+	height: 100%;
+	width: 60px;
+	background-color: green;
+}
+
+.currentDirText {
+	height: 100%;
+	width: calc(100% - 60px);
+	background-color: yellow;
+}
+
+@-webkit-keyframes open {
+  0%
+  { margin-left: 0;}
+  100%
+  { margin-left: -340px;}
+}
+
+@-moz-keyframes open  {
+  0%
+  { margin-left: 0;}
+  100%
+  { margin-left: -340px;}
+}
+
+@keyframes open {
+  0%
+  { margin-left: 0;}
+  100%
+  { margin-left: -340px;}
+}
+
+@-webkit-keyframes close {
+  0%
+  { margin-left: -340px;}
+  100%
+  { margin-left: 0;}
+}
+
+@-moz-keyframes close  {
+  0%
+  { margin-left: -340px;}
+  100%
+  { margin-left: 0;}
+}
+
+@keyframes close {
+  0%
+  { margin-left: -340px;}
+  100%
+  { margin-left: 0;}
+}
+
+@-webkit-keyframes fadeIn {
+  0%
+  { opacity: 0;}
+  100%
+  { opacity: 1;}
+}
+
+@-moz-keyframes fadeIn  {
+  0%
+  { opacity: 0;}
+  100%
+  { opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0%
+  { opacity: 0;}
+  100%
+  { opacity: 1;}
+}
