@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EnRoute</title>
+	<meta name="author" content="Emily Kolar">
+	<!-- bring in web components js file -->
+	<script src="bower/webcomponentsjs/webcomponents-lite.js"></script>
+  	<link rel="import" href="top-bar.html">
+	<!-- jquery api and hopskotch.js -->
+	<script src="js/vendor/jquery-2.1.4.min.js"></script>
+	<script src="js/vendor/hopscotch.min.js"></script>
+	<!-- bring in google maps components -->
+	<link rel="import" href="bower/google-map/google-map.html">
+	<link rel="import" href="bower/google-map/google-map-marker.html">
+	<link rel="import" href="bower/google-map/google-map-directions.html">
+	<link rel="import" href="bower/google-map/google-map-search.html">
+	<!-- foundation grid and hopskotch styling -->
+	<link rel="stylesheet" href="css/vendor/foundation.min.css">
+	<link rel="stylesheet" href="css/vendor/hopscotch.min.css">
+	<!-- font -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+	<!-- my styling -->
+	<link rel="stylesheet" href="css/base.css">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="appContainer" id="app-container"> <!-- keeps width restricted, 100vh height (no scroll) -->
+	<div class="phoneScreen row" id="phone-screen"> <!-- phone screen area - area available to app-->
+		<div class="topBar row" id="main-bar">
+			<div class="column small-1 medium-1 large-1 menu-icon menuIcon" id="menu-toggle">
+			</div>
+			<form class="column small-11 medium-11 large-11 searchForm">
+				<div class="input-group">
+    				<span class="input-group-label searchIcon"></span>
+    				<input class="input-group-field searchField" type="text" id="search-field" placeholder="Where to?">
+    				<button class="close-button searchClose" aria-label="Close alert" type="button" id="search-cancel">&times;</button>
+  				</div>
+			</form>
+		</div>
+	
+		<div class="mainPanel" id="main-panel">
+			<google-map id="map1" class="gmap">
+				<google-map-marker id="marker1" class="gmarker" title="You" clickEvents="true"></google-map-marker>
+			</google-map>
+			<google-map-directions id="directions1"></google-map-directions>
+	    	<google-map-search id="search1"></google-map-search>
+	    	<google-map-search id="search2"></google-map-search>
+			<!-- <span class="marker current" id="map-marker"></span> -->
+			<!-- insert explore panel here -->
+		</div>
+
+		<div class="adminPanel row" id="admin-panel">
+			<form class="column small-12 medium-12 large-12">
+				<label>Email Address
+    				<input id="user-email" type="text" placeholder="" aria-describedby="emailHelpText">
+  				</label>
+    			<p class="help-text" id="emailHelpText">
+    				Must be a valid email address
+    			</p>
+  				<label>Password
+    				<input id="user-phrase" type="password" placeholder="" aria-describedby="passHelpText">
+  				</label>
+  				<p class="help-text" id="passHelpText">
+  					Password must be at least 8 characters
+  				</p>
+  				<div class="hideConfirm" id="confirm-phrase">
+	  				<label>Confirm Password
+	    				<input id="user-match" type="password" placeholder="" aria-describedby="matchHelpText">
+	  				</label>
+	  				<p class="help-text" id="matchHelpText">
+	  					Passwords must match
+	  				</p>  
+	  			</div>
+	  			<button type="button" class="success button adminBtn" id="create-submit">
+	  				Create Account
+	  			</button>
+	  			<button type="button" class="alert button adminBtn" id="create-cancel">
+	  				Cancel
+	  			</button>
+			</form>
+		</div>
+
+		<div class="explorePanel row" id="explore-panel">
+			<div class="row catRow">
+				<div class="category column small-6 medium-6 large-6">
+					<span class="cat food" id="cat-food"></span><span class="catName">Food</span>
+				</div>
+				<div class="category column small-6 medium-6 large-6">
+					<span class="cat coffee" id="cat-coffee"></span><span class="catName">Coffee</span>
+				</div>	
+			</div>
+			<div class="row catRow">
+				<div class="category column small-6 medium-6 large-6">
+					<span class="cat rest" id="cat-rest"></span><span class="catName">Rest Stops</span>
+				</div>
+				<div class="category column small-6 medium-6 large-6">
+					<span class="cat rec" id="cat-rec"></span><span class="catName">Recreation</span>
+				</div>	
+			</div>
+			<div class="row catRow">
+				<div class="category column small-6 medium-6 large-6">
+					<span class="cat over" id="cat-21"></span><span class="catName">Over 21</span>
+				</div>
+				<div class="category column small-6 medium-6 large-6">
+					<span class="cat misc" id="cat-misc"></span><span class="catName">Miscellaneous</span>
+				</div>	
+			</div>
+		</div>
+
+		<div class="row instructRow" id="instruct-row">
+			<div class="dirIcon column small-2 medium-2 large-2" id="dir-icon"></div>
+			<div class="instruct column small-8 medium-8 large-8" id="instruct-panel">
+				<p id="instructions" class="instructionsText"><span class="getDirections">Get Directions Here</span></p>
+			</div>
+			<div class="dirBtn column small-2 medium-2 large-2" id="dir-button"><a class="button nextBtn car" id="next-button"></a></div>
+			<div class="loader" id="svg-loader"><img src="images/gps.svg"></div>
+		</div>
+
+		<div class="row buttonGroup bottomGroup">
+			<div class="column small-6 medium-6 large-6 bottomOption"><a class="button optionButton chosen" id="route-button">Route</a></div>
+			<div class="column small-6 medium-6 large-6 bottomOption"><a class="button optionButton" id="explore-button">Explore</a></div>
+		</div><!-- end bottom bar -->
+		<div class="menuPanel" id="menu-panel">
+			<ul class="menu vertical menuPanelUl" id="menu-ul">
+		  		<li><a href="#" class="expanded button login" id="login-button">Login</a><a href="#" class="expanded button create" id="create-button">Create</a></li>
+		  		<li><a href="#">Home</a></li>
+		  		<li><a href="#">Work</a></li>
+		  		<li><a href="#">Favorites</a></li>
+			</ul>
+		</div>	
+	</div> <!-- end phone screen area -->
+</div> <!-- end app container -->
+<script src="js/script.js"></script>
+<script src="js/mymap.js"></script>
+<script src="js/explore.js"></script>
+<!--<script src="js/enroutetour.js"></script>-->
+</body>
+</html>
