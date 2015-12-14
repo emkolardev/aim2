@@ -1,0 +1,83 @@
+<!--import polymer -->
+<link rel="import" href="../bower/polymer/polymer.html">
+<dom-module id="top-bar"> <!-- id matches tag name -->
+  <template>
+    <style>
+      .bar {
+        height: 50px;
+        width: 400px;
+        background-color: rgba(0,0,0,0.8);
+        position: absolute;
+      }
+      .searchGroup {
+        padding-left: 10px;
+      }
+      .confirmBtn {
+        padding: 2px 0 0;
+        width: 30px;
+        height: 35px;
+        margin-top: -8px;
+        margin-left: -5px;
+        border-radius: 2px;
+        background-color: rgba(42,163,100,1);
+        font-size: 30px;
+        visibility: hidden;
+      }
+      .confirmBtn.check {
+        background-image: url('../images/checkmark.png');
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+      }
+      .confirmBtn.deletable {
+        background-image: url('../images/cancel.png');
+      }
+      .btnColumn {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+      }
+    </style>
+
+    <!-- <top-bar> -->
+        <div class="row bar">
+          <div class="btnColumn column small-1 medium-1 large-1 menuIcon"><a class="button confirmBtn" id="confirm-button">&plus;</a></div>
+          <form class="column small-11 medium-11 large-11 searchForm">
+            <div class="input-group searchGroup">
+                <span class="input-group-label searchIcon"></span>
+                <input class="input-group-field searchField" type="text" id="srch-field" placeholder="Search near route...">
+                <button class="close-button searchClose" aria-label="Close alert" type="button" id="srch-cancel">&times;</button>
+              </div>
+          </form>
+        </div>
+    <!-- </top-bar> -->
+  </template>
+  <script>
+  Polymer({
+    is: 'top-bar',
+    ready: function() {
+      var srchCancel = $('#srch-cancel');
+      var srchField = $('#srch-field'); 
+      var srchText = false;
+      
+      //show cancel button when text exists in search box
+      srchField.keyup(function() {
+        if (srchField.val()) { srchText = true; }
+        else { srchText = false; }
+        if (srchText) { srchCancel.addClass('showClose'); }
+        else { srchCancel.removeClass('showClose'); }
+      });
+
+      //delete text and hide cancel button on cancel-click
+      srchCancel.on('click', function() {
+        srchField.val("");
+        srchCancel.removeClass('showClose');
+        srchField.removeClass('focused');
+      });
+    }
+  });
+  </script>
+</dom-module>
+
+

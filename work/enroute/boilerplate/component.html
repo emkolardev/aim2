@@ -1,0 +1,31 @@
+<!--import polymer -->
+<link rel="import" href="bower_components/polymer/polymer.html">
+<dom-module id="component-name"> <!-- id matches tag name -->
+  <template>
+    <style>
+      :host {
+        style: value;
+      }
+    </style>
+    <!-- <component-name> -->
+      <div>
+        <img src="{{ stuff }}">
+      </div>
+    <!-- </component-name> -->
+  </template>
+  <script>
+  Polymer({
+    is: 'component-name',
+    properties: {
+      
+    },
+    ready: function() {
+      this.$.id.addEventListener('click', function() {
+        this.attribute += 1;
+      }.bind(this));
+    }
+  });
+  </script>
+</dom-module>
+
+

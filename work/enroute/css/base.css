@@ -1,0 +1,32 @@
+/* box-sizing border-box - http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Type */
+body {
+  color: #333;
+  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* Media */
+img,
+video,
+canvas, {
+  max-width: 100%;
+}
+
+/* Clearfix */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

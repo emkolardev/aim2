@@ -1,0 +1,849 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"nav",
+				"navigationStarted"
+			],
+			[
+				"get",
+				"getCurrentPosition"
+			],
+			[
+				"instr",
+				"instructionsArray"
+			],
+			[
+				"background",
+				"background-attachment"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"background-",
+				"background-size"
+			],
+			[
+				"b",
+				"inline-block"
+			],
+			[
+				"tic",
+				"ticker2"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"google",
+				"google-map-marker"
+			],
+			[
+				"defa",
+				"defaultColor"
+			],
+			[
+				"conte",
+				"contentString"
+			],
+			[
+				"usr",
+				"usr-lng"
+			],
+			[
+				"bl",
+				"black"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"quer",
+				"querySelector"
+			],
+			[
+				"border-bot",
+				"border-bottom-left-radius"
+			],
+			[
+				"view",
+				"viewportHeight"
+			],
+			[
+				"viewport",
+				"viewportWidth"
+			],
+			[
+				"St",
+				"STATIC_DRAW"
+			],
+			[
+				"verte",
+				"vertexColorAttribute"
+			],
+			[
+				"F",
+				"Float32Array"
+			],
+			[
+				"squa",
+				"squareVerticesColorBuffer"
+			],
+			[
+				"create",
+				"createBuffer"
+			],
+			[
+				"squ",
+				"squareVerticesColorBuffer"
+			],
+			[
+				"sq",
+				"squareVerticesColorBuffer"
+			],
+			[
+				"vertex",
+				"vertexPositionAttribute"
+			],
+			[
+				"square",
+				"squareVerticesBuffer"
+			],
+			[
+				"DEPTH",
+				"DEPTH_BUFFER_BIT"
+			],
+			[
+				"hdr",
+				"hdrBorder"
+			],
+			[
+				"hd",
+				"hdrBg"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"outli",
+				"outline-width"
+			],
+			[
+				"outline",
+				"outline-color"
+			],
+			[
+				"font",
+				"font-variant"
+			],
+			[
+				"line",
+				"outline-color"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"fonts",
+				"font-style"
+			],
+			[
+				"add",
+				"additionalEscapes"
+			],
+			[
+				"star",
+				"startSeq"
+			],
+			[
+				"amb",
+				"ambianceout"
+			],
+			[
+				"base",
+				"base16-light"
+			],
+			[
+				"ret",
+				"returnType"
+			],
+			[
+				"gut",
+				"gutterClick"
+			],
+			[
+				"break",
+				"breakpointGutter"
+			],
+			[
+				"getEleme",
+				"getElementsByClassName"
+			],
+			[
+				"coord",
+				"coordinates"
+			],
+			[
+				"repeat",
+				"repeatString"
+			],
+			[
+				"random",
+				"randomIcon"
+			],
+			[
+				"pick",
+				"pickuptruck"
+			],
+			[
+				"docu",
+				"documentElement"
+			],
+			[
+				"vehicle",
+				"vehicleTypeID"
+			],
+			[
+				"infoW",
+				"infoWinIndex"
+			],
+			[
+				"vehic",
+				"vehicleData"
+			],
+			[
+				"veh",
+				"vehicleData"
+			],
+			[
+				"des",
+				"destinationC"
+			],
+			[
+				"destin",
+				"destinationC"
+			],
+			[
+				"dest",
+				"destinationB"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"s",
+				"square"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"select",
+				"selectText"
+			],
+			[
+				"skatebo",
+				"skateboard-desktop"
+			],
+			[
+				"m",
+				"menuContent"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/Emily/Desktop/FA15/aim2/work/era/index.html",
+			"settings":
+			{
+				"buffer_size": 6125,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "Package Control: isntal",
+		"selected_items":
+		[
+			[
+				"Package Control: isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: <head>"
+			],
+			[
+				"Snippet: html",
+				"Snippet: DOCTYPE HTML"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Emily/Desktop/FA15/aim2/work/enrouteapp",
+		"/Users/Emily/Desktop/FA15/aim2/work/era",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/js"
+	],
+	"file_history":
+	[
+		"/Users/Emily/Desktop/FA15/aim2/work/era/top-bar.html",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/js/script.js",
+		"/Users/Emily/Desktop/FA15/aim2/work/enrouteapp/js/mapcomponent.js",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/js/mymap.js",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/css/style.css",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/js/explore.js",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/index.html",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/js/enroutetour.js",
+		"/Users/Emily/Downloads/custom-f6 2/css/foundation.css",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/maps/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week2/parallax/purecss.css",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/css/base.css",
+		"/Users/Emily/Downloads/custom-f6 2/index.html",
+		"/Users/Emily/Desktop/FA15/aim2/work/enrouteapp/index3.html",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/boilerplate/hopscotch.min.js",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/boilerplate/hopskotch.min.css",
+		"/Users/Emily/Desktop/FA15/aim2/work/era/boilerplate/component.html",
+		"/Users/Emily/Desktop/website-projects/leephototest/index.html",
+		"/Users/Emily/Desktop/website-projects/leephototest/js/script.js",
+		"/Users/Emily/Desktop/website-projects/leephototest/css/style.css",
+		"/Users/Emily/Desktop/website-projects/leephototest/components/lee-album.html",
+		"/Users/Emily/Desktop/website-projects/leephototest/components/lee-photo.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/js/script.js",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/js/makelightboxes.js",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/js/makephotos.js",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/js/imagepaths.js",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/antarctica.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/boilerplate/photogallery.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/week11/dossier.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/galleries/antarctica.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/css/style.css",
+		"/Users/Emily/Desktop/FA15/aim2/work/zurb/index.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/css/galleries.css",
+		"/Users/Emily/Downloads/custom-f6/js/foundation.js",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/gallery/product.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/gallery/ferguson.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/gallery/antarctica.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/gallery/citymus.html",
+		"/Users/Emily/Desktop/website-projects/leepresserstudio/ferguson.html",
+		"/Users/Emily/Desktop/website-projects/leepresserphoto/alt_index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week12/cw-react-starter/app/common.js",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week12/cw-react-starter/app/common-items.js",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week12/cw-react-starter/require-config.js",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week12/style.css",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week12/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week12/app.js",
+		"/Users/Emily/Desktop/FA15/aim2/assets/css/base.css",
+		"/Users/Emily/Desktop/FA15/scripting/week_10/index.html",
+		"/Users/Emily/Desktop/FA15/scripting/week_10/zen/index.html",
+		"/Users/Emily/Desktop/FA15/scripting/week_10/zen/styles.css",
+		"/Users/Emily/Desktop/FA15/scripting/week_11/css/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/randomColor.js",
+		"/Users/Emily/Desktop/FA15/scripting/week_10/zen/randomColor.js",
+		"/Users/Emily/Desktop/FA15/scripting/week_11/index.html",
+		"/Users/Emily/Desktop/FA15/scripting/week_10/zen/script.js",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/trubble-bubble/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/palette/component.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/trubble-bubble/trubble-bubble.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/palette/index.html",
+		"/Users/Emily/Desktop/embed/js/fatelinks.js",
+		"/Users/Emily/Desktop/embed/js/orientation.js",
+		"/Users/Emily/Desktop/embed/js/apple.js",
+		"/Users/Emily/Desktop/embed/style2.css",
+		"/Users/Emily/Desktop/embed/index2.html",
+		"/Users/Emily/Desktop/embed/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/week11/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/week11/reference.html",
+		"/Users/Emily/Desktop/embed/apple.js",
+		"/Users/Emily/Desktop/embed/js/pym.js",
+		"/Users/Emily/Desktop/embed/pym.js",
+		"/Users/Emily/Desktop/embed/css/style.css",
+		"/Users/Emily/Desktop/embed/style.css",
+		"/Users/Emily/Desktop/FA15/aim2/work/enrouteapp/js/usertest.js",
+		"/Users/Emily/Desktop/FA15/aim2/work/enrouteapp/js/script.js",
+		"/Users/Emily/Desktop/embed/fatelinks.js",
+		"/Users/Emily/Desktop/embed/normalize.css",
+		"/Users/Emily/Desktop/embed/embedTest.html",
+		"/Users/Emily/Desktop/FA15/aim2/work/enrouteapp/index2.html",
+		"/Users/Emily/Desktop/enrouteapp/index2.html",
+		"/Users/Emily/Desktop/embed/ios-orientationfix.js",
+		"/Users/Emily/Desktop/embed/jquery.responsiveIframe.js",
+		"/Users/Emily/Desktop/embed/frame.js",
+		"/Users/Emily/Desktop/enrouteapp/index.html",
+		"/Users/Emily/Desktop/enrouteapp/index3.html",
+		"/Users/Emily/Desktop/enrouteapp/css/style2.css",
+		"/Users/Emily/Desktop/enrouteapp/js/script.js",
+		"/Users/Emily/Desktop/enrouteapp/js/mapcomponent.js",
+		"/Users/Emily/Desktop/enrouteapp/css/style.css",
+		"/Users/Emily/Desktop/enrouteapp/js/map.js",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/cw-polymer-starter/palette/component.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/cw-polymer-starter/trubble-bubble/trubble-bubble.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/cw-polymer-starter/trubble-bubble/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/cw-polymer-starter/palette/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week11/cw-polymer-starter/maps/index.html",
+		"/Users/Emily/canvas/style.css",
+		"/Users/Emily/canvas/index.html",
+		"/Users/Emily/scripting/index.html",
+		"/Users/Emily/Desktop/FA15/scripting/index.html",
+		"/Users/Emily/Desktop/FA15/scripting/week_10/zen/nicegray.css",
+		"/Users/Emily/Desktop/FA15/hw-webcomponents-starter/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/week10/index.html",
+		"/Users/Emily/Desktop/FA15/scripting/week_10/zen/vertigo.css",
+		"/Users/Emily/Desktop/FA15/scripting/week_11/css/style.css",
+		"/Users/Emily/Desktop/FA15/scripting/week_11/css/car.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week10/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week10/weatherwidget.html",
+		"/Users/Emily/Desktop/FA15/hw-webcomponents-starter/component.html",
+		"/Users/Emily/Desktop/FA15/hw-webcomponents-starter/control.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week6/vertical-center/style.scss",
+		"/Users/Emily/Desktop/FA15/aim2/work/interact/index.html",
+		"/Users/Emily/Desktop/FA15/aim2/index.html",
+		"/Users/Emily/Desktop/FA15/aim2/assets/css/styles.css",
+		"/Users/Emily/Desktop/FA15/aim2/assets/js/jquery.min.js",
+		"/Users/Emily/Desktop/enrouteapp/css/normalizeAndBase.css",
+		"/Users/Emily/Desktop/FA15/aim2/assets/css/vendor/normalize.css",
+		"/Users/Emily/Desktop/FA15/ewt/boilerplate/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week10/sandbox.js",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week10/sandbox.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/midterm-opt/page.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/midterm-original/page.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/midterm-opt/index-min.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/midterm-opt/index.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/midterm-opt/page-min.html",
+		"/Users/Emily/Desktop/FA15/ewt/hw/midterm-opt/css/normalizeShared-comp.css",
+		"/Users/Emily/Desktop/FA15/ewt/hw/midterm-opt/css/style-comp.css",
+		"/Users/Emily/Desktop/FA15/scripting/zen/vertigo.css",
+		"/Users/Emily/Desktop/FA15/ewt/cw/week9/performance/style.css",
+		"/Users/Emily/Desktop/FA15/ewt/hw/midterm-faster 2/test.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 190.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"z-inde",
+			"exploreb",
+			"google-map-marker-click",
+			"click",
+			"12",
+			"map1",
+			"main",
+			".button",
+			"button",
+			"button-group",
+			"button",
+			":focus",
+			":active",
+			"input-group-label",
+			"input-group-fi",
+			"type=\"text\"",
+			"input-group",
+			"input-group-field",
+			"topb",
+			"input-group",
+			"input-group-b",
+			"cancel",
+			"button",
+			"alert",
+			"aria",
+			"input-group-la",
+			"type=\"text\"",
+			"input:foc",
+			"input",
+			"field",
+			"input-group",
+			"menu-icon",
+			"input-group",
+			"form",
+			"title-bar",
+			"search",
+			"small-2",
+			"medium",
+			"@media",
+			"760",
+			"\"images/AntarcticaAndSouthAmerica/",
+			".jpg",
+			"vm[0-9]*:\\d ",
+			"/vm",
+			"what",
+			"<li>",
+			"column",
+			"214",
+			"7",
+			"nyt",
+			"common",
+			"about",
+			"display-",
+			"displayL",
+			"display",
+			"search",
+			"makeMarker",
+			"row",
+			"column",
+			"expanding",
+			"column",
+			"instruct",
+			"380",
+			";\n",
+			"figure",
+			"textcon",
+			"eval-",
+			"emval",
+			"-list",
+			"box-si",
+			"meme",
+			"content",
+			"printString",
+			"h1",
+			"hdrbor",
+			"gld",
+			"auto",
+			"content",
+			"curtain",
+			"content",
+			"console.log",
+			"top",
+			"fig",
+			"figure",
+			"uniform",
+			"persp",
+			"hint",
+			"depth",
+			"depth_",
+			" rotation",
+			"rotation",
+			"mvrot",
+			"mvm",
+			"push",
+			"vertexcolor",
+			");\n",
+			"draws",
+			"initbuf",
+			"getshad",
+			"initsh",
+			"drawsc",
+			"fig",
+			"express()",
+			"; ",
+			"<input ",
+			"id=\"\"",
+			"input type=\"text\" ",
+			"padding",
+			"margin",
+			"font",
+			"height",
+			"codemirror()",
+			"(cm) ",
+			"(cm)",
+			"};",
+			"constructor",
+			"\\\\",
+			"tests",
+			"\\\\",
+			"(this)",
+			"signalCursorAct",
+			"(cm)",
+			"cm.",
+			"\\\\",
+			"codemirror.pro",
+			"new codemirror",
+			"prototype",
+			"codemirror"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\"",
+			".jpg\", ",
+			" \"",
+			"<li>9.",
+			"<li>8.",
+			"<li>7.",
+			"<li>6.",
+			"<li>5.",
+			"<li>4.",
+			"<li>3.",
+			"<li>2.",
+			"<li>1.",
+			"<li>2. ",
+			"column cell",
+			"340",
+			"list-",
+			"printIt",
+			"print",
+			"<input id=\"resForm\" ",
+			"<input id=\"submitForm\" ",
+			"<input id=\"radSch\" ",
+			"<input id=\"radProEmp\" ",
+			"<input id=\"radEmp\" ",
+			"<input id=\"bestChar\" ",
+			"<input id=\"cats\" ",
+			"<input id=\"range\" ",
+			"<input id=\"color\" ",
+			"<input id=\"bday\" ",
+			"<input id=\"pw\" ",
+			"id=\"alias\"",
+			"input type=\"text\" id=\"\" ",
+			"#FFFFFF",
+			"ambianceout",
+			"\"",
+			"]",
+			"[",
+			"]",
+			"[",
+			"model",
+			"0.4",
+			"\n            </li>",
+			"\n                </li>",
+			"<li>\n                  ",
+			"<li>\n              ",
+			"\n        </li>",
+			"<li>\n          ",
+			"\n            </li>",
+			"<li>\n              ",
+			"\n			</li>",
+			"<li>\n				",
+			"",
+			"<li>",
+			"</li>",
+			"",
+			"<li>",
+			"",
+			"h2",
+			"img alt=\"\" ",
+			"\\s+src=\"[^\"]*\" alt=\"\"",
+			"\\s+class=\"[^\"]*\" alt=\"\"",
+			"<a href=\"\">",
+			"",
+			";",
+			"</li>",
+			"",
+			"<li>",
+			"",
+			"makeModel"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/Emily/Desktop/FA15/aim2/work/era/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 6125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "enroute.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 126.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

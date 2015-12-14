@@ -1,0 +1,556 @@
+/* box-sizing border-box - http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  	box-sizing: border-box;
+}
+*, *:before, *:after {
+  	box-sizing: inherit;
+}
+
+/* Type */
+body {
+  	color: #333;
+  	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  	font-size: 16px;
+  	-webkit-font-smoothing: antialiased;
+  	line-height: 1.6;
+  	text-rendering: optimizeLegibility;
+	background-color: black;
+}
+
+
+/* Media */
+img, video, canvas, {
+  	max-width: 100%;
+}
+
+/* Clearfix */
+.clearfix:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+/*========================================
+Mobile-first styles here:
+========================================*/
+
+.appContainer {
+	height: 100vh; /*725px*/
+	width: 400px; /*420px*/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.phoneScreen {
+	background-color: rgba(200,200,200,1);
+	height: 700px;
+	width: 400px;
+	max-width: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+
+.phoneScreen .row {
+	max-width: 400px;
+	margin-left: 0px;
+}
+
+#map1 {
+	height: 700px;
+	width: 400px;
+}
+
+.aboveMap {
+	z-index: 990;
+}
+
+.mainPanel {
+	height: 650px;
+	width: 400px;
+	max-width: 400px;
+	position: absolute;
+	background-image: url('../images/map2.png');
+	background-repeat: no-repeat;
+	background-size: 400px 650px;
+	overflow: hidden;
+}
+
+.mainPanel.ikea {
+	background-image: url('../images/map3.png');
+}
+
+.gmarker {
+	-webkit-animation: fadeInOut 6s;
+  	-webkit-animation-timing-function: ease-out;
+  	-webkit-animation-iteration-count: infinite;
+  	-moz-animation: fadeInOut 6s;
+  	-moz-animation-timing-function: ease-out;
+    -moz-animation-iteration-count: infinite;
+  	animation: fadeInOut 6s;
+  	animation-timing-function: ease-out;
+  	animation-iteration-count: infinite;
+}
+
+.marker.current {
+	width: 30px;
+	height: 30px;
+	display: block;
+	position: absolute;
+	background-image: url('../images/current.png');
+	background-repeat: no-repeat;
+	margin-top: 312px;
+	margin-left: 113px;
+	cursor: pointer;
+}
+
+.marker.ikea {
+	width: 30px;
+	height: 43px;
+	background-image: url('../images/pinpink.png');
+}
+
+.adminPanel {
+	width: 400px;
+	max-width: 100%;
+	height: 650px;
+	position: absolute;
+	background-color: rgba(0,0,0,1);
+	display: none;
+}
+
+.adminPanel.show {
+	display: block;
+}
+
+.adminPanel form {
+	margin-top: 25px;
+}
+
+.adminPanel label {
+	color: white;
+	font-size: 16px;
+}
+
+.adminPanel p {
+	color: white;
+}
+
+.adminPanel input:focus {
+	color: rgba(80,80,80,1);
+}
+
+.adminBtn {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.adminBtn:last-child {
+	margin-top: 0px;
+}
+
+.explorePanel {
+	width: 400px;
+	max-width: 100%;
+	height: 600px;
+	position: absolute;
+	background-color: rgba(0,0,0,0.8);
+	display: none;
+	overflow: auto;
+	z-index: 999;
+}
+
+.explorePanel.show {
+	display: block;
+}
+
+.catRow {
+	height: 160px;
+	width: 400px;
+}
+
+.category {
+	height: 160px;
+}
+
+.cat {
+	height: 100px;
+	width: 140px;
+	border-radius: 3px;
+	display: block;
+	margin: 20px auto 10px;
+	cursor: pointer;
+	background-image: url('../images/car.png');
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position: center;
+}
+
+.catName {
+	height: 30px;
+	width: 140px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	color: white;
+}
+
+.cat.food {
+	background-color: rgba(246,205,67,1);
+}
+
+.cat.coffee {
+	background-color: rgba(204,48,82,1);
+}
+
+.cat.rest {
+	background-color: rgba(50,140,205,1);
+}
+
+.cat.rec {
+	background-color: rgba(42,163,100,1);
+}
+
+.cat.misc {
+	background-color: rgba(138,21,249,1);
+}
+
+.cat.over {
+	background-color: rgba(206,126,0,1);
+}
+
+.help-text {
+	display: none;
+	color: rgba(201,100,20,1);
+}
+
+.hideConfirm {
+	display: none !important;
+}
+
+.invalid, .invalid:focus {
+	color: rgba(201,32,1,1);
+	background-color: rgba(255,192,203,1);
+}
+
+.valid, .valid:focus {
+	color: green;
+	background-color: rgba(244,238,224,1);
+}
+
+.success:disabled:hover, .success:disabled {
+	background-color: rgba(200,200,200,1);
+}
+
+.topBar {
+	height: 50px;
+	background-color: rgba(0,0,0,0.8);
+	padding-left: 10px;
+}
+
+.placesPic {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	float: right;
+	right: 0;
+	z-index: 996;
+}
+
+.menuIcon {
+	margin: 15px 0 0;
+}
+
+.searchForm {
+	margin: 5px 0 0;
+	padding-left: 5px;
+	height: 40px;
+}
+
+.searchField {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: none;
+	color: rgba(80,80,80,1);
+}
+
+.searchField:focus {
+	border: 1px solid #cacaca;
+	border-right: none;
+	border-left: none;
+	box-shadow: none;
+}
+
+.searchIcon {
+	background-color: rgba(255,255,255,1);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: none;
+	background-image: url('../images/search.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 15px 15px
+}
+
+.searchClose {
+	visibility: hidden;
+	height: 40px;
+	margin: -3px 0 0 -3px;
+	width: 25px;
+	font-size: 1.5em;
+	color: rgba(223,67,43,0.5);
+}
+
+.searchClose:hover {
+	color: rgba(223,67,43,1);
+}
+
+.searchRoute {
+	position: absolute;
+	z-index: 910;
+}
+
+.instructRow {
+	position: absolute;
+	display: none;
+	height: 100px;
+	margin-top: 500px;
+	width: 100%;
+	background-color: rgba(220,220,220,0.9);
+}
+
+.instructRow.show {
+	display: block;
+}
+
+.loader {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	margin: 0;
+	background-color: rgba(220,220,220,1);
+	display: none;
+}
+
+.loader img {
+	margin: 35px calc(50% - 15px);
+}
+
+.loader.loading {
+	display: block;
+}
+
+.dirIcon {
+	height: 100px;
+	padding-top: 10px;
+	background-image: url('../images/arrow.png');
+	background-size: 24px 36px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.dirBtn {
+	height: 100px;
+	padding-top: 10px;
+	padding-left: 0;
+}
+
+.nextBtn {
+	margin: 0 0;
+	height: 80px;
+	width: 60px;
+	padding-top: 32px;
+	padding-left: 13px;
+	text-align: center;
+	border-radius: 2px;
+	text-transform: uppercase;
+	background-color: rgba(42,163,100,1);
+}
+
+.nextBtn.car {
+	background-image: url('../images/car.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30px 20px;
+}
+
+.nextBtn:hover {
+	background-color: rgba(42,163,100,0.8);
+}
+
+.instruct {
+	height: 100px;
+	padding-top: 10px;
+	padding-left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.instructionsText {
+	width: 100%;
+}
+
+.getDirections {
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.bottomGroup {
+	height: 50px;
+	position: absolute;
+	margin-top: 600px;
+	width: 100%;
+	padding: 0;
+}
+
+.bottomOption {
+	height: 100%;
+	padding: 0;
+}
+
+.optionButton {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.8);
+	padding-top: 1.1em;
+	font-size: 16px;
+	letter-spacing: .04em;
+}
+
+.optionButton.chosen {
+	background-color: rgba(200,200,200,0.9);
+	color: rgba(80,80,80,1);
+	border-bottom: 2px solid rgba(255,255,255,1);
+}
+
+.optionButton.chosen:hover {
+	background-color: rgba(200,200,200,0.9);
+}
+
+.optionButton:hover {
+	background-color: rgba(40,40,40,0.8);
+}
+
+.menuPanel {
+	position: absolute;
+	background-color: rgba(0,0,0,0.9);
+	height: 0px;
+	width: 400px;
+	display: none;
+	z-index: 500;
+}
+
+.menuPanel.openMenu {
+	-webkit-animation: slideOpen 0.2s;
+  	-webkit-animation-timing-function: ease-out;
+  	-moz-animation: slideOpen 0.2s;
+  	-moz-animation-timing-function: ease-out;
+  	animation: slideOpen 0.2s;
+  	animation-timing-function: ease-out;
+	height: 300px;
+	display: block;
+}
+
+.menuPanelUl {
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.menuPanelUl li {
+	border-bottom: 1px solid rgba(180,180,180,1);
+	padding: 10px 0;
+}
+
+.menuPanelUl a {
+	color: rgba(200,200,200,1);
+}
+
+.menuPanelUl li:last-child {
+	border-bottom: none;
+}
+
+.menuPanelUl .login {
+	background-color: rgba(160,75,158,1);
+	margin-bottom: 5px;
+}
+
+.showClose {
+	visibility: visible;
+}
+
+@-webkit-keyframes slideOpen {
+  0%
+  { height: 0px;}
+  100%
+  { height: 300px;}
+}
+
+@-moz-keyframes slideOpen  {
+  0%
+  { height: 0px;}
+  100%
+  { height: 300px;}
+}
+
+@keyframes slideOpen {
+  0%
+  { height: 0px;}
+  100%
+  { height: 300px;}
+}
+
+@-webkit-keyframes visibleOpt {
+  0%
+  { display: none; }
+  99%
+  { display: none; }
+  100%
+  { display: block;}
+}
+
+@-moz-keyframes visibleOpt  {
+  0%
+  { display: none; }
+  99%
+  { display: none; }
+  100%
+  { display: block;}
+}
+
+@keyframes visibleOpt {
+  0%
+  { display: none; }
+  99%
+  { display: none; }
+  100%
+  { display: block;}
+}
+
+
+@-webkit-keyframes fadeInOut {
+  0%
+  { opacity: 1; }
+  50%
+  { opacity: 0.6; }
+  100%
+  { opacity: 1; }
+}
+
+@-moz-keyframes fadeInOut  {
+  0%
+  { opacity: 1; }
+  50%
+  { opacity: 0.6; }
+  100%
+  { opacity: 1; }
+}
+
+@keyframes fadeInOut {
+  0%
+  { opacity: 1; }
+  50%
+  { opacity: 0.6; }
+  100%
+  { opacity: 1; }
+}
